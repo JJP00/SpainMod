@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "XYZ",
+    "###"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:porkchop"
+    },
+    "Y": {
+      "item": "minecraft:beef"
+    },
+    "Z": {
+      "item": "minecraft:egg"
+    },
+    "#": {
+      "item": "aprendiendo:hojaldre"
+    }
+  },
+  "result": {
+    "item": "aprendiendo:pastel_carne"
+  }
+}
