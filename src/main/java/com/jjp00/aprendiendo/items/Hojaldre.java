@@ -1,6 +1,5 @@
 package com.jjp00.aprendiendo.items;
 
-import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 
