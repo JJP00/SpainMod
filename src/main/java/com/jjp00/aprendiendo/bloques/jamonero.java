@@ -1,7 +1,6 @@
 package com.jjp00.aprendiendo.bloques;
 
-import com.jjp00.aprendiendo.items.JamonFood;
-import com.jjp00.aprendiendo.items.JamonItem;
+
 import com.jjp00.aprendiendo.registro.RegItem;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -27,7 +26,7 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import javax.naming.directory.ModificationItem;
+
 
 
 public class jamonero extends Block {
@@ -36,8 +35,6 @@ public class jamonero extends Block {
     private static final VoxelShape SHAPE2 = box(5,0,0,11,11,16);
 
     private static final IntegerProperty USES = IntegerProperty.create("uses", 0,16);
-    private static final IntegerProperty FORMA = IntegerProperty.create("forma", 0,5);
-
 
     public jamonero() {
         super(BlockBehaviour.Properties.of(Material.WOOD)
@@ -57,7 +54,7 @@ public class jamonero extends Block {
             return InteractionResult.sidedSuccess(p_60504_.isClientSide);
         } else if (i > 0) { //i mas que 0 por lo tanto tiene un jamon encima
             if (itemStack.is(Items.IRON_SWORD)) {
-                cortarJamon(p_60503_,p_60504_,p_60505_,itemStack);
+                cortarJamon(p_60503_,p_60504_,p_60505_);
             }
             return InteractionResult.sidedSuccess(p_60504_.isClientSide);
         } else {
@@ -76,7 +73,7 @@ public class jamonero extends Block {
         return blockstate;
     }
 
-    public static BlockState cortarJamon(BlockState bloque, Level level, BlockPos pos, ItemStack stack) {
+    public static BlockState cortarJamon(BlockState bloque, Level level, BlockPos pos) {
         if (!level.isClientSide) {
             double d0 = (double)(level.random.nextFloat() * 0.5F) + (double)0.15F;
             double d1 = (double)(level.random.nextFloat() * 0.11F) + (double)0.060000002F + 0.6D;
